@@ -394,6 +394,8 @@ main > div:not(.asset):hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .transactions__header {
@@ -422,8 +424,45 @@ main > div:not(.asset):hover {
 }
 
 .transactions__list {
-  height: 85%;
+  height: 75%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.transactions__list div {
+  position: relative;
+  height: 20%;
+  width: 95%;
+  border-bottom: 1px solid white;
+  margin: 0px auto 0px auto;
+}
+
+.transactions__list div:nth-child(5) {
+  border: none;
+}
+
+.transactions i {
+  font-size: 32px;
+  position: absolute;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+}
+
+.transactions .time {
+  font-style: italic;
+  color: gray;
 }
 
 .asset {

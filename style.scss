@@ -285,6 +285,7 @@ main{
     background-color: $dark_gray;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     &__header{
         padding-left: 20px;
         padding-right: 20px;
@@ -300,14 +301,40 @@ main{
                 color: lighten($survol, 10%);
             }
         }
-        p{
-        }
     }
 
     &__list{
-        height: 85%;
+        height: 75%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        div{
+            position: relative;
+            height: 20%;
+            width: 95%;
+            border-bottom: 1px solid white;
+            margin: 0px auto 0px auto;
+        }
+        div:nth-child(5){
+            border: none;
+        }
     }
+
+    i{
+        font-size: 32px;
+        position: absolute;
+        display: block;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .time{
+        font-style: italic;
+        color: gray;
+    }
+
 }
 
 .asset{
