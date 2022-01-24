@@ -358,7 +358,7 @@ main{
     width: 70%;
     background-color: $dark_gray;
     transition-duration: 0.5s;
-
+    
     &:hover{
         border-color: $survol;
     }
@@ -404,6 +404,8 @@ main{
 @media (max-width: 1600px) { 
     .asset{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .asset_item{
         width: 100%;
@@ -449,6 +451,6 @@ main{
         }
     }
     .asset_item.add_asset{
-        width: 90vw;
+        width: 90%;
     }
 }

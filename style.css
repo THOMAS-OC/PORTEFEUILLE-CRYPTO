@@ -552,6 +552,12 @@ main > div:not(.asset):hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .asset_item {
     width: 100%;
@@ -595,7 +601,7 @@ main > div:not(.asset):hover {
     bottom: 2px;
   }
   .asset_item.add_asset {
-    width: 90vw;
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */
