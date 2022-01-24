@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1d20;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+  background-color: #111213;
+  width: 100vw;
+  height: 80px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  width: 75%;
+  color: #8b9298;
+  list-style-type: none;
+}
+
+.nav ul li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 78px;
+  cursor: pointer;
+  margin-right: 2%;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.nav ul li:hover {
+  border-bottom: 2px solid #ffa600;
+  color: #ffa600;
+  font-weight: bold;
+}
+
+.nav .account {
+  width: 15%;
+}
+/*# sourceMappingURL=style.css.map */

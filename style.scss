@@ -1,0 +1,53 @@
+@import "_variables.scss";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $gray;
+    font-family:'Courier New', Courier, monospace;
+}
+
+header{
+    background-color: $dark_gray;
+    width: 100vw;
+    height: 80px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    ul{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 80px;
+        width: 75%;
+        color: lighten($dark_gray, 50%);
+        list-style-type: none;
+        li{
+            box-sizing: border-box;
+            line-height: 78px;
+            cursor: pointer;
+            margin-right: 2%;
+            width: 150px;
+            text-align: center;
+            transition-duration: 0.5s;
+            transition-property: color;
+            &:hover{
+                border-bottom: 2px solid $survol;
+                color: $survol;
+                font-weight: bold;
+            }
+        }
+    }
+    .account{
+        width: 15%;
+    }
+}
