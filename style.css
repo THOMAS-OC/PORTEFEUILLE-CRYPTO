@@ -6,6 +6,11 @@
   overflow: visible;
 }
 
+a {
+  color: #8b9298;
+  text-decoration: none;
+}
+
 body {
   background-color: #1d1d20;
   font-family: 'Courier New', Courier, monospace;
@@ -93,5 +98,22 @@ li:nth-child(1):hover .links_account {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.links_account a {
+  height: 20%;
+}
+
+.links_account a:hover {
+  background-color: #664200;
+  color: wheat;
+  border-bottom: 2px solid #ffa600;
 }
 /*# sourceMappingURL=style.css.map */

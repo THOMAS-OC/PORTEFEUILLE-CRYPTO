@@ -7,6 +7,11 @@
     overflow: visible;
 }
 
+a{
+    color: lighten($dark_gray, 50%);
+    text-decoration: none;
+}
+
 body{
     background-color: $gray;
     font-family:'Courier New', Courier, monospace;
@@ -73,4 +78,14 @@ li:nth-child(1){
     z-index: 1000;
     transition-duration: 0.5s;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    a{
+        height: 20%;
+        &:hover{
+            background-color: darken($survol, 30%);
+            color: wheat;
+            border-bottom: 2px solid $survol;
+        }
+    }
 }
