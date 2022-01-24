@@ -5,39 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfeuille Crypto Thomas</title>
 </head>
-<body>
 
+
+
+<body>
+    <div class="loader"></div>
 
     <header>
 
+
+
         <nav class="nav">
             <ul>
-                <li>Account
+                <li><i class="fas fa-wallet"></i>Account
                     <div class="links_account">
-                        <a href="#">Overwies</a>
-                        <a href="#">Assets</a>
-                        <a href="#">Liabilities</a>
-                        <a href="#">Signers</a>
-                        <a href="#">Properties</a>
+                        <a href="#"><i class="fas fa-chart-pie"></i>overview</a>
+                        <a href="#"><i class="fas fa-ticket-alt"></i>Assets</a>
+                        <a href="#"><i class="fas fa-piggy-bank"></i>Liabilities</a>
+                        <a href="#"><i class="fas fa-file-signature"></i>Signers</a>
+                        <a href="#"><i class="fas fa-cogs"></i>Properties</a>
                     </div>
                 </li>
-                <li>Send</li>
-                <li>Receive</li>
-                <li>Trade</li>
-                <li>Escrow</li>
-                <li>Checks</li>
+                <li><i class="fas fa-file-upload"></i>Send</li>
+                <li><i class="fas fa-file-download"></i>Receive</li>
+                <li><i class="fas fa-exchange-alt"></i>Trade</li>
+                <li><i class="far fa-hourglass"></i>Escrow</li>
+                <li><i class="fas fa-sticky-note"></i>Checks</li>
             </ul>
-            <div class="account"></div>
+            <h2 class="account"> <i class="fas fa-book-open"></i>Compte M.Dupont
+                <div class="portefeuille_account">
+                    <a href="#"><i class="fas fa-plus"></i>Add account</a>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i>Log out</a>
+                </div>
+            </h2>
         </nav>
 
     </header>
 
 
     <main>
+        <div class="profil">
+            <div class="photo">
+                <img src="" alt="">
+            </div>
+            <div class="details">
+                <ul>
+                    <li>Domain</li>
+                    <li>Email Hash</li>
+                    <li>Message key</li>
+                    <li>Actived</li>
+                    <li>actived with</li>
+                    <li>Actived by</li>
+                    <li>Reserve</li>
+                </ul>
+            </div>
+        </div>
+        <div class="asset">
+            <div class="asset_item asset1">
+                <div class="crypto"></div>
+                <div class="list_btn"></div>
+            </div>
+            <div class="asset_item asset2">
+                    <div class="crypto"></div>
+                    <div class="list_btn"></div>
+            </div>
+            <div class="asset_item add_asset">
+                <p> <span>+</span> Add Asset</p>
+            </div>
+        </div>
 
-
+        <div class="transactions">
+            <div class="transactions__header">
+                <p>Latest transactions</p>
+                <a href="#">View All</a>
+            </div>
+            <div class="transactions__list"></div>
+        </div>
 
     </main>
 

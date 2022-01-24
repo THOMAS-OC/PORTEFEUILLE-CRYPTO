@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     overflow: visible;
+    color: white;
 }
 
 a{
@@ -12,30 +13,101 @@ a{
     text-decoration: none;
 }
 
+p{
+    color: white;
+}
+
+// Création du loader
+.loader{
+    position: absolute;
+    width:  200px;
+    height: 200px;
+    border: 15px dotted $survol;
+    filter: drop-shadow(0px 0px 5px white);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: loader;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+@keyframes loader {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    20%{
+        transform: translate(-50%, -50%) rotate(-40deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(1turn);
+        opacity: 1;
+    }
+    90%{
+        transform: translate(-50%, -50%) rotate(1turn);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(-5000px, -50%) rotate(1turn);
+        opacity: 0;
+    }
+}
+
+@keyframes blur {
+    from{
+        filter: blur(10px)
+    }
+
+    to{
+        filter: blur(0px)
+    }
+}
+
+
 body{
     background-color: $gray;
     font-family:'Courier New', Courier, monospace;
+    animation-name: body_loader;
 }
 
+
 header{
+    animation-fill-mode: backwards;
+    animation-name: blur;
+    animation-duration: 3s;
+    animation-delay: 3s;
     background-color: $dark_gray;
     width: 100vw;
     height: 80px;
+    transition-duration: 1s;
+    box-shadow: 0px 0.2px 10px $survol;
+    &:hover{
+        box-shadow: 0px 2px 20px $survol;
+    }
 }
 
 .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    i{
+        margin-right: 10px;
+        opacity: 0.5;
+    }
     ul{
         display: flex;
         justify-content: flex-start;
         align-items: center;
         height: 80px;
-        width: 75%;
-        color: lighten($dark_gray, 50%);
+        width: 60%;
+        color: lighten($dark_gray, 70%);
+        color: white;
+        font-weight: bold;
         list-style-type: none;
         li{
             position: relative;
@@ -50,12 +122,29 @@ header{
             &:hover{
                 border-bottom: 2px solid $survol;
                 color: $survol;
-                font-weight: bold;
+                font-weight: bolder;
             }
         }
     }
     .account{
-        width: 15%;
+        width: 40%;
+    }
+
+    h2{
+        position: relative;
+        text-align: right;
+        cursor: pointer;
+        line-height: 78px;
+        width: 50px;
+        color: white;
+        width: auto;
+        transition-duration: 0.5s;
+        transition-property: color;
+        &:hover{
+            border-bottom: 2px solid $survol;
+            color: $survol;
+            font-weight: bolder;
+        }
     }
 }
 
@@ -66,7 +155,12 @@ li:nth-child(1){
     }
 }
 
+
+
 .links_account{
+
+    border-left: 2px dashed $survol;
+    border-bottom: 2px dashed $survol;
     position: absolute;
     transform-origin: top;
     transform: scaleY(0);
@@ -87,5 +181,195 @@ li:nth-child(1){
             color: wheat;
             border-bottom: 2px solid $survol;
         }
+    }
+}
+
+.portefeuille_account{
+
+    border-right: 2px dashed $survol;
+    border-bottom: 2px dashed $survol;
+    transform-origin: top;
+    transform: scaleY(0);
+    height: 140px;
+    width: 300px;
+    position: absolute;
+    background-color: $dark_gray;
+    right: 0;
+    top: 88px;
+    transition-duration: 0.5s;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 10;
+    a{
+        height: 50%;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        &:hover{
+            background-color: darken($survol, 30%);
+            color: wheat;
+            border-bottom: 2px solid $survol;
+        }
+    }
+}
+
+// Apparition du .portefeuille_account
+
+h2:hover .portefeuille_account{
+    transform: scaleX(1);
+    opacity: 1;
+
+}
+
+// Contenu principal
+
+main{
+    animation-name: blur;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    display: flex;
+    background-color: red;
+    height: auto;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.profil{
+    width: 26vw;
+    height: 500px;
+    background-color: $dark_gray;
+    display: flex;
+    flex-direction: column;
+
+    .photo{
+        padding: 10px;
+        width: 100%;
+        height: 50%;
+        background-color: green;
+    }
+
+    .details{
+        border-top: 1px solid white;
+        padding: 10px;
+        width: 100%;
+        height: 50%;
+        ul{
+            list-style-type: none;
+
+        }
+    }
+}
+
+.transactions{
+    width: 34vw;
+    height: 500px;
+    background-color: $dark_gray;
+    display: flex;
+    flex-direction: column;
+    &__header{
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 15%;
+        width: 100%;
+        border-bottom: 1px solid lighten($gray, 40%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            color: $survol;
+            &:hover{
+                color: lighten($survol, 10%);
+            }
+        }
+        p{
+        }
+    }
+
+    &__list{
+        height: 85%;
+        width: 100%;
+    }
+}
+
+.asset{
+    width: 30vw;
+    background-color: $dark_gray;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.add_asset{
+    border-radius: 5px;
+    border : 2px dotted white;
+    cursor: pointer;
+    width: 100%;
+    background-color: wheat;
+    transition-duration: 0.5s;
+
+    &:hover{
+        border-color: $survol;
+    }
+    &:hover p {
+        color: $survol;
+    }
+
+    p{
+        transition-duration: 0.5s;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+        span{
+            font-size: 32px;
+        }
+    }
+}
+
+.asset_item{
+    width: 48%;
+    height: 150px;
+    background-color: $gray;
+    display: flex;
+    flex-direction: column;
+    .crypto{
+        height: 70%;
+        width: 100%;
+        background-color: green;
+    }
+    .list_btn{
+        height: 30%;
+        width: 100%;
+        background-color: violet;
+    }
+}
+
+
+// Première adaptation responsive
+@media (max-width: 1600px) { 
+    .asset{
+        flex-direction: column;
+    }
+    .asset_item{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+
+// Responsive navbar
+@media (max-width: 1080px) { 
+    header{
+
+        nav{
+            display: none;
+            visibility: hidden;
+        }
+        h2{
+            display: none;
+            visibility: hidden;
+        }
+
     }
 }
