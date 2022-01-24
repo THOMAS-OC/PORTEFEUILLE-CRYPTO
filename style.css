@@ -47,18 +47,14 @@ p {
             transform: translate(-50%, -50%) rotate(-40deg);
   }
   50% {
-    -webkit-transform: translate(-50%, -50%) rotate(1turn);
-            transform: translate(-50%, -50%) rotate(1turn);
     opacity: 1;
   }
   90% {
-    -webkit-transform: translate(-50%, -50%) rotate(1turn);
-            transform: translate(-50%, -50%) rotate(1turn);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate(-5000px, -50%) rotate(1turn);
-            transform: translate(-5000px, -50%) rotate(1turn);
+    -webkit-transform: translate(-50%, -50%) rotate(0.5turn);
+            transform: translate(-50%, -50%) rotate(0.5turn);
     opacity: 0;
   }
 }
@@ -73,18 +69,14 @@ p {
             transform: translate(-50%, -50%) rotate(-40deg);
   }
   50% {
-    -webkit-transform: translate(-50%, -50%) rotate(1turn);
-            transform: translate(-50%, -50%) rotate(1turn);
     opacity: 1;
   }
   90% {
-    -webkit-transform: translate(-50%, -50%) rotate(1turn);
-            transform: translate(-50%, -50%) rotate(1turn);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate(-5000px, -50%) rotate(1turn);
-            transform: translate(-5000px, -50%) rotate(1turn);
+    -webkit-transform: translate(-50%, -50%) rotate(0.5turn);
+            transform: translate(-50%, -50%) rotate(0.5turn);
     opacity: 0;
   }
 }
@@ -230,8 +222,8 @@ li:nth-child(1):hover .links_account {
 }
 
 .links_account {
-  border-left: 2px dashed #3d8bff;
-  border-bottom: 2px dashed #3d8bff;
+  border-left: 2px solid #3d8bff;
+  border-bottom: 2px solid #3d8bff;
   position: absolute;
   -webkit-transform-origin: top;
           transform-origin: top;
@@ -239,7 +231,7 @@ li:nth-child(1):hover .links_account {
           transform: scaleY(0);
   width: 200px;
   height: 350px;
-  top: 88px;
+  top: 80px;
   left: 0;
   background-color: #111213;
   z-index: 1000;
@@ -266,8 +258,8 @@ li:nth-child(1):hover .links_account {
 }
 
 .portefeuille_account {
-  border-right: 2px dashed #3d8bff;
-  border-bottom: 2px dashed #3d8bff;
+  border-right: 2px solid #3d8bff;
+  border-bottom: 2px solid #3d8bff;
   -webkit-transform-origin: top;
           transform-origin: top;
   -webkit-transform: scaleY(0);
@@ -277,7 +269,7 @@ li:nth-child(1):hover .links_account {
   position: absolute;
   background-color: #111213;
   right: 0;
-  top: 88px;
+  top: 80px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   display: -webkit-box;
@@ -478,9 +470,8 @@ main > div:not(.asset):hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -513,6 +504,7 @@ main > div:not(.asset):hover {
   color: white;
   text-align: center;
   line-height: 150px;
+  font-size: 32px;
 }
 
 .asset_item.add_asset p span {
@@ -522,7 +514,7 @@ main > div:not(.asset):hover {
 }
 
 .asset_item {
-  width: 48%;
+  width: 45%;
   height: 150px;
   background-color: #111213;
   display: -webkit-box;
@@ -537,13 +529,41 @@ main > div:not(.asset):hover {
 .asset_item .crypto {
   height: 70%;
   width: 100%;
-  background-color: green;
+  background-color: #111213;
 }
 
 .asset_item .list_btn {
   height: 30%;
   width: 100%;
-  background-color: violet;
+  background-color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.asset_item .list_btn div {
+  width: 25%;
+  border-right: 1px solid #1d1d20;
+  text-align: center;
+  cursor: pointer;
+}
+
+.asset_item .list_btn div:hover i {
+  color: #3d8bff;
+}
+
+.asset_item .list_btn div i {
+  color: #1d1d20;
+  text-align: center;
+}
+
+.asset_item .list_btn div:nth-child(4) {
+  border: none;
 }
 
 @media (max-width: 1600px) {

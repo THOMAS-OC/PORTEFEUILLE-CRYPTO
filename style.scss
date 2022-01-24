@@ -42,16 +42,13 @@ p{
         transform: translate(-50%, -50%) rotate(-40deg);
     }
     50%{
-        transform: translate(-50%, -50%) rotate(1turn);
         opacity: 1;
     }
     90%{
-        transform: translate(-50%, -50%) rotate(1turn);
         opacity: 0;
     }
-
     100%{
-        transform: translate(-5000px, -50%) rotate(1turn);
+        transform: translate(-50%, -50%) rotate(0.5turn);
         opacity: 0;
     }
 }
@@ -159,14 +156,14 @@ li:nth-child(1){
 
 .links_account{
 
-    border-left: 2px dashed $survol;
-    border-bottom: 2px dashed $survol;
+    border-left: 2px solid $survol;
+    border-bottom: 2px solid $survol;
     position: absolute;
     transform-origin: top;
     transform: scaleY(0);
     width: 200px;
     height: 350px;
-    top: 88px;
+    top: 80px;
     left: 0;
     background-color: $dark_gray;
     z-index: 1000;
@@ -186,8 +183,8 @@ li:nth-child(1){
 
 .portefeuille_account{
 
-    border-right: 2px dashed $survol;
-    border-bottom: 2px dashed $survol;
+    border-right: 2px solid $survol;
+    border-bottom: 2px solid $survol;
     transform-origin: top;
     transform: scaleY(0);
     height: 140px;
@@ -195,7 +192,7 @@ li:nth-child(1){
     position: absolute;
     background-color: $dark_gray;
     right: 0;
-    top: 88px;
+    top: 80px;
     transition-duration: 0.5s;
     display: flex;
     flex-direction: column;
@@ -347,7 +344,7 @@ main{
 .asset{
     width: 30vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -374,6 +371,7 @@ main{
         color: white;
         text-align: center;
         line-height: 150px;
+        font-size: 32px;
         span{
             font-size: 32px;
             transition-duration: 0.5s;
@@ -382,7 +380,7 @@ main{
 }
 
 .asset_item{
-    width: 48%;
+    width: 45%;
     height: 150px;
     background-color: $dark_gray;
     display: flex;
@@ -390,12 +388,31 @@ main{
     .crypto{
         height: 70%;
         width: 100%;
-        background-color: green;
+        background-color: $dark_gray;
     }
     .list_btn{
         height: 30%;
         width: 100%;
-        background-color: violet;
+        background-color: gray;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        div{
+            width: 25%;
+            border-right: 1px solid $gray;
+            text-align: center;
+            cursor: pointer;
+            &:hover i{
+                color: $survol;
+            }
+            i{
+                color: $gray;
+                text-align: center;
+            }
+        }
+        div:nth-child(4){
+            border: none;
+        }
     }
 }
 
