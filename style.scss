@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: visible;
 }
 
 body{
@@ -32,6 +33,7 @@ header{
         color: lighten($dark_gray, 50%);
         list-style-type: none;
         li{
+            position: relative;
             box-sizing: border-box;
             line-height: 78px;
             cursor: pointer;
@@ -50,4 +52,25 @@ header{
     .account{
         width: 15%;
     }
+}
+
+li:nth-child(1){
+    &:hover .links_account{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.links_account{
+    position: absolute;
+    transform-origin: top;
+    transform: scaleY(0);
+    width: 200px;
+    height: 350px;
+    top: 88px;
+    left: 0;
+    background-color: $dark_gray;
+    z-index: 1000;
+    transition-duration: 0.5s;
+    opacity: 0;
 }
