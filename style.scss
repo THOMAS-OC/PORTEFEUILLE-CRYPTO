@@ -335,6 +335,13 @@ main{
         color: gray;
     }
 
+    p:not(.time){
+        cursor: pointer;
+        &:hover{
+            color: $survol;
+        }
+    }
+
 }
 
 .asset{
@@ -421,7 +428,7 @@ main{
     main{
         flex-direction: column;
         align-items: center;
-        & > div{
+        & > div:not(.asset){
             box-shadow: 1px 1px 2px white;
             border-radius: 20px;
             width: 80vw;
@@ -433,6 +440,15 @@ main{
         }
     }
     .transactions, .profil, .asset{
+        width: 90vw;
+    }
+
+    .transactions{
+        i{
+            bottom: 2px;
+        }
+    }
+    .asset_item.add_asset{
         width: 90vw;
     }
 }
