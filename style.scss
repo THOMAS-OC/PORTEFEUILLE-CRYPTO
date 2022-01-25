@@ -357,7 +357,7 @@ main{
         padding: 10px;
         width: 400%;
         height: 50%;
-        transform: translateX(-25%);
+        transform: translateX(-0%);
         display: flex;  
         transition-duration: 1s;
         .crypto_logo{
@@ -372,6 +372,7 @@ main{
             background-size: cover;
             width: 200px;
             height: 200px;
+            filter: drop-shadow(0 0 0.75rem rgb(161, 161, 161));
         }
 
         .crypto_logo--eth{

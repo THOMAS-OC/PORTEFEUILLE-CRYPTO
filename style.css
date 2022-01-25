@@ -491,8 +491,8 @@ main > div {
   padding: 10px;
   width: 400%;
   height: 50%;
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,6 +511,8 @@ main > div {
   background-size: cover;
   width: 200px;
   height: 200px;
+  -webkit-filter: drop-shadow(0 0 0.75rem #a1a1a1);
+          filter: drop-shadow(0 0 0.75rem #a1a1a1);
 }
 
 .profil .photo .crypto_logo--eth .img {
