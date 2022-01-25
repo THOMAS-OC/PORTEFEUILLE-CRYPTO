@@ -488,8 +488,18 @@ main > div {
 
 .profil .photo {
   padding: 10px;
-  width: 100%;
+  width: 400%;
   height: 50%;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profil .photo .crypto_logo {
+  width: 25%;
+  height: 100%;
+  border: 2px solid white;
 }
 
 .profil .details {

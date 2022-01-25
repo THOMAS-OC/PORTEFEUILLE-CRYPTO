@@ -352,17 +352,19 @@ main{
     background-color: $dark_gray;
     display: flex;
     flex-direction: column;
-
+    // overflow: hidden;
     .photo{
         padding: 10px;
-        width: 100%;
+        width: 400%;
         height: 50%;
+        // transform: translateY(-20%);
+        background-color: red;
+        display: flex;  
         .crypto_logo{
-            width: 100%;
+            width: 25%;
             height: 100%;
-            background-color: red;
+            border: 2px solid white;
         }
-
     }
 
     .details{
