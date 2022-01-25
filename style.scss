@@ -529,6 +529,7 @@ main{
 }
 
 .asset_item{
+    cursor: pointer;
     width: 45%;
     height: 150px;
     background-color: $dark_gray;
@@ -571,6 +572,9 @@ main{
         div:nth-child(4){
             border: none;
         }
+    }
+    &:hover{
+        box-shadow: 0px 0px 5px $survol;
     }
 }
 

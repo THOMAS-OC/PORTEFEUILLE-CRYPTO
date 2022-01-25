@@ -704,6 +704,7 @@ main > div {
 }
 
 .asset_item {
+  cursor: pointer;
   width: 45%;
   height: 150px;
   background-color: #111213;
@@ -765,6 +766,11 @@ main > div {
 
 .asset_item .list_btn div:nth-child(4) {
   border: none;
+}
+
+.asset_item:hover {
+  -webkit-box-shadow: 0px 0px 5px #3d8bff;
+          box-shadow: 0px 0px 5px #3d8bff;
 }
 
 @media (max-width: 1600px) {
