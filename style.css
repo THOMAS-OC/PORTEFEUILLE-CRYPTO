@@ -112,6 +112,7 @@ body {
   font-family: 'Courier Prime', monospace;
   -webkit-animation-name: body_loader;
           animation-name: body_loader;
+  overflow: hidden;
 }
 
 header {
@@ -216,6 +217,8 @@ header:hover {
 .nav i {
   margin-right: 10px;
   opacity: 0.5;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .nav ul {
@@ -255,6 +258,10 @@ header:hover {
   border-bottom: 2px solid #3d8bff;
   color: #3d8bff;
   font-weight: bolder;
+}
+
+.nav ul li:hover i {
+  margin-right: 20px;
 }
 
 .nav .account {
@@ -773,9 +780,19 @@ main > div {
     width: 100%;
     margin-bottom: 50px;
   }
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
 
 @media (max-width: 1080px) {
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
   header nav {
     display: none;
     visibility: hidden;
