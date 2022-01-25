@@ -1,9 +1,11 @@
 // Gestion de la navbar sur smartphone
-
 const btnNavRight = document.querySelector(".btnNav--Right")
 const btnNavleft = document.querySelector(".btnNav--Left")
 let activeLeft = false
 let activeRight = false
+
+const returnLeft = document.querySelector(".returnLeft")
+const returnRight = document.querySelector(".returnRight")
 
 btnNavRight.addEventListener("click", ()=>{
 
@@ -39,6 +41,14 @@ btnNavleft.addEventListener("click", ()=>{
         activeLeft = false
         activeRight = true
     }
+})
 
-    
+returnLeft.addEventListener("click", ()=>{
+        document.querySelector(".navSmartphoneLeft").style.transform = "translateX(-100%)"
+        activeLeft = false
+})
+
+returnRight.addEventListener("click", ()=>{
+    document.querySelector(".navSmartphoneRight").style.transform = "translateX(100%)"
+    activeRight = false
 })

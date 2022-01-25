@@ -17,6 +17,11 @@ p{
     color: white;
 }
 
+html{
+    scroll-behavior: smooth;
+    // overflow: hidden;
+}
+
 // Création du loader
 .loader{
     position: absolute;
@@ -89,23 +94,48 @@ header{
 
 .navSmartphone{
     height: 100vh;
-    width: 70vw;
+    width: 50vw;
     position: absolute;
     top: 0;
-    background-color: $dark_gray;
+    background-color: $gray;
     transform: translateX(-100%);
     z-index: 10000;
     transition-duration: 0.5s;
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    .returnLeft, .returnRight{
+        height: 10%;
+        font-size: 50px;
+        @extend %center_flex;
+        cursor: pointer;
+        border-bottom: 2px solid gray;
+    }
+    ul{
+        height: 90%;
+        font-size: 30px;
+        list-style-type: none;
+        margin-top: 50px;
+        padding-left: 30px;
+        i{
+            margin-right: 40px;
+        }
+        li{
+            height: 10%;
+            cursor: pointer;
+            &:hover{
+                color: $survol;
+            }
+        }
+    }
 }
 
 .navSmartphoneRight{
     height: 100vh;
-    width: 70vw;
+    width: 50vw;
     position: absolute;
     top: 0px;
     right: 0px;
-    background-color: red;
     transform: translateX(100%);
     z-index: 10000;
 }
@@ -176,11 +206,16 @@ li:nth-child(1){
     }
 }
 
+%center_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btnNav{
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: red;
     border-radius: 50%;
     z-index: 100;
     visibility: hidden;
@@ -190,14 +225,17 @@ li:nth-child(1){
 .btnNav--Left{
     left: 10px;
     top: 50%;
-    background-color: green;
     transform: translateY(-50%);
+    @extend %center_flex;
+    font-size: 40px;
 }
 
 .btnNav--Right{
+    @extend %center_flex;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
+    font-size: 40px;
 }
 
 
@@ -289,6 +327,22 @@ main{
         }
     }
 
+    & > div{
+        animation-name: zoomDiv;
+        animation-delay: 5s;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+
+}
+
+@keyframes zoomDiv {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .profil{
@@ -535,5 +589,15 @@ main{
 
     .navSmartphone{
         visibility: visible;
+        width: 50vw;
     }
+}
+
+@media (max-width: 500px) { 
+
+    .navSmartphone{
+        visibility: visible;
+        width: 75vw;
+    }
+
 }

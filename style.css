@@ -16,6 +16,10 @@ p {
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .loader {
   position: absolute;
   width: 200px;
@@ -136,24 +140,59 @@ header:hover {
 
 .navSmartphone {
   height: 100vh;
-  width: 70vw;
+  width: 50vw;
   position: absolute;
   top: 0;
-  background-color: #111213;
+  background-color: #1d1d20;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   z-index: 10000;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navSmartphone .returnLeft, .navSmartphone .returnRight {
+  height: 10%;
+  font-size: 50px;
+  cursor: pointer;
+  border-bottom: 2px solid gray;
+}
+
+.navSmartphone ul {
+  height: 90%;
+  font-size: 30px;
+  list-style-type: none;
+  margin-top: 50px;
+  padding-left: 30px;
+}
+
+.navSmartphone ul i {
+  margin-right: 40px;
+}
+
+.navSmartphone ul li {
+  height: 10%;
+  cursor: pointer;
+}
+
+.navSmartphone ul li:hover {
+  color: #3d8bff;
 }
 
 .navSmartphoneRight {
   height: 100vh;
-  width: 70vw;
+  width: 50vw;
   position: absolute;
   top: 0px;
   right: 0px;
-  background-color: red;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 10000;
@@ -247,11 +286,22 @@ li:nth-child(1):hover .links_account {
   opacity: 1;
 }
 
+.navSmartphone .returnLeft, .navSmartphone .returnRight, .btnNav--Left, .btnNav--Right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btnNav {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: red;
   border-radius: 50%;
   z-index: 100;
   visibility: hidden;
@@ -261,9 +311,9 @@ li:nth-child(1):hover .links_account {
 .btnNav--Left {
   left: 10px;
   top: 50%;
-  background-color: green;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  font-size: 40px;
 }
 
 .btnNav--Right {
@@ -271,6 +321,7 @@ li:nth-child(1):hover .links_account {
   right: 10px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  font-size: 40px;
 }
 
 .links_account {
@@ -386,6 +437,39 @@ main > div:not(.asset):hover {
           box-shadow: 2px 2px 10px #3d8bff;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+}
+
+main > div {
+  -webkit-animation-name: zoomDiv;
+          animation-name: zoomDiv;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomDiv {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoomDiv {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .profil {
@@ -691,6 +775,17 @@ main > div:not(.asset):hover {
   }
   .asset_item.add_asset {
     width: 90%;
+  }
+  .navSmartphone {
+    visibility: visible;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .navSmartphone {
+    visibility: visible;
+    width: 75vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
