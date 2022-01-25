@@ -52,3 +52,26 @@ returnRight.addEventListener("click", ()=>{
     document.querySelector(".navSmartphoneRight").style.transform = "translateX(100%)"
     activeRight = false
 })
+
+// Animation "caroussel" crypto
+
+const eth = document.querySelector(".asset1")
+const xrp = document.querySelector(".asset2")
+const btc = document.querySelector(".asset3")
+const xdc = document.querySelector(".asset4")
+
+eth.addEventListener("mouseover", ()=>{
+    document.querySelector(".photo").style.transform = "translateX(-0%)"
+})
+
+xrp.addEventListener("mouseover", ()=>{
+    document.querySelector(".photo").style.transform = "translateX(-25%)"
+})
+
+btc.addEventListener("mouseover", ()=>{
+    document.querySelector(".photo").style.transform = "translateX(-50%)"
+})
+
+xdc.addEventListener("mouseover", ()=>{
+    document.querySelector(".photo").style.transform = "translateX(-75%)"
+})

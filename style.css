@@ -287,7 +287,7 @@ li:nth-child(1):hover .links_account {
   opacity: 1;
 }
 
-.navSmartphone .returnLeft, .navSmartphone .returnRight, .btnNav--Left, .btnNav--Right {
+.navSmartphone .returnLeft, .navSmartphone .returnRight, .btnNav--Left, .btnNav--Right, .profil .photo .crypto_logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,22 +484,52 @@ main > div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 .profil .photo {
   padding: 10px;
   width: 400%;
   height: 50%;
-  background-color: red;
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .profil .photo .crypto_logo {
   width: 25%;
   height: 100%;
-  border: 2px solid white;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.profil .photo .img {
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+
+.profil .photo .crypto_logo--eth .img {
+  background-image: url("images/eth.png");
+}
+
+.profil .photo .crypto_logo--xrp .img {
+  background-image: url("images/xrp.png");
+  background-size: cover;
+}
+
+.profil .photo .crypto_logo--xdc .img {
+  background-image: url("images/xdc.png");
+  background-size: cover;
+}
+
+.profil .photo .crypto_logo--btc .img {
+  background-image: url("images/btc.png");
+  background-size: cover;
 }
 
 .profil .details {

@@ -352,18 +352,48 @@ main{
     background-color: $dark_gray;
     display: flex;
     flex-direction: column;
-    // overflow: hidden;
+    overflow: hidden;
     .photo{
         padding: 10px;
         width: 400%;
         height: 50%;
-        // transform: translateY(-20%);
-        background-color: red;
+        transform: translateX(-25%);
         display: flex;  
+        transition-duration: 1s;
         .crypto_logo{
             width: 25%;
             height: 100%;
-            border: 2px solid white;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @extend %center_flex
+        }
+
+        .img{
+            background-size: cover;
+            width: 200px;
+            height: 200px;
+        }
+
+        .crypto_logo--eth{
+            .img{
+                background-image: url('images/eth.png');
+            }
+        }
+        .crypto_logo--xrp{
+            .img{
+                background-image: url('images/xrp.png');
+                background-size: cover;
+            }        }
+        .crypto_logo--xdc{
+            .img{
+                background-image: url('images/xdc.png');
+                background-size: cover;
+            }        }
+        .crypto_logo--btc{
+            .img{
+                background-image: url('images/btc.png');
+                background-size: cover;
+            }        
         }
     }
 
