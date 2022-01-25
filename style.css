@@ -166,6 +166,7 @@ header:hover {
   font-size: 50px;
   cursor: pointer;
   border-bottom: 2px solid gray;
+  background-color: #161618;
 }
 
 .navSmartphone ul {
@@ -178,10 +179,12 @@ header:hover {
 
 .navSmartphone ul i {
   margin-right: 40px;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
 }
 
 .navSmartphone ul li {
-  height: 10%;
+  height: 13%;
   cursor: pointer;
 }
 
