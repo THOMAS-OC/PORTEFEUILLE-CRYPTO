@@ -111,6 +111,7 @@ body {
 }
 
 header {
+  position: relative;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-name: blur;
@@ -131,6 +132,31 @@ header {
 header:hover {
   -webkit-box-shadow: 0px 2px 20px #3d8bff;
           box-shadow: 0px 2px 20px #3d8bff;
+}
+
+.navSmartphone {
+  height: 100vh;
+  width: 70vw;
+  position: absolute;
+  top: 0;
+  background-color: #111213;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  z-index: 10000;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.navSmartphoneRight {
+  height: 100vh;
+  width: 70vw;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: red;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  z-index: 10000;
 }
 
 .nav {
@@ -219,6 +245,32 @@ li:nth-child(1):hover .links_account {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
   opacity: 1;
+}
+
+.btnNav {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 100;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.btnNav--Left {
+  left: 10px;
+  top: 50%;
+  background-color: green;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.btnNav--Right {
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .links_account {
@@ -530,6 +582,17 @@ main > div:not(.asset):hover {
   height: 70%;
   width: 100%;
   background-color: #111213;
+  padding: 10px 0px 20px 20px;
+}
+
+.asset_item .crypto p {
+  font-size: 30px;
+}
+
+.asset_item .crypto p:nth-child(2) {
+  color: gray;
+  font-style: italic;
+  font-size: 25px;
 }
 
 .asset_item .list_btn {
@@ -594,6 +657,9 @@ main > div:not(.asset):hover {
     display: none;
     visibility: hidden;
   }
+  header .btnNav {
+    visibility: visible;
+  }
   main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -619,6 +685,9 @@ main > div:not(.asset):hover {
   }
   .transactions i {
     bottom: 2px;
+  }
+  .transactions__list p {
+    font-size: 12px;
   }
   .asset_item.add_asset {
     width: 90%;
