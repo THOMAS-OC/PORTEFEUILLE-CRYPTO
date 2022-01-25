@@ -787,5 +787,8 @@ main > div {
     visibility: visible;
     width: 75vw;
   }
+  .navSmartphone ul {
+    font-size: 25px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
